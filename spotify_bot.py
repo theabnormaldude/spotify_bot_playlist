@@ -25,14 +25,14 @@ class spotify_bot:
     def play(self,playlist):
         self.playlist=playlist
         self.driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/form/div[3]/div[2]/button").click()
-        sleep(3)
+        sleep(5)
         self.driver.find_element_by_xpath("/html/body/div[3]/div/div[3]/div[2]/nav/ul/li[2]/div/a").click()
-        sleep(3)
+        sleep(5)
         self.driver.find_element_by_xpath("/html/body/div[3]/div/div[3]/div[1]/header/div[3]/div/div/label/input").send_keys(playlist)
-        sleep(3)
+        sleep(5)
         self.driver.find_element_by_xpath("/html/body/div[3]/div/div[3]/div[4]/div[1]/div/div[2]/div/div/div/section[1]/div/div[2]/div/div/div/div[4]").click()
-        sleep(3)
-        self.driver.find_element_by_xpath("/html/body/div[3]/div/div[3]/div[4]/div[1]/div/div[2]/div[1]/section/div/div/div[1]/div/header/div[2]/div[2]/div[1]/button").click()   
+        sleep(5)
+        self.driver.find_element_by_xpath("/html/body/div[3]/div/div[3]/div[4]/div[1]/div/div[2]/section[1]/div[3]/div/button").click()   
         
 login=spotify_bot("ENTER_EMAIL_ID","ENTER_PASSWORD")
-login.play("ENTER_PLAYLIST")
+login.play("PLAYLIST_NAME")
